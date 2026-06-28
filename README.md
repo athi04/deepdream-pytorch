@@ -56,21 +56,13 @@ Optional flags:
 | `--effect-resolution` | Resolution the effect is computed at (detail size) | `224` |
 | `--no-pyramid` | Disable detail-reinjection pyramid for video | pyramid on |
 
-## Example
-
-<!-- Add a before/after image here. For a visual project this matters more than
-any description — run the script on one photo and drop the result in. -->
-
-```
-![Before](examples/input.jpg)  ![After](examples/output.jpg)
-```
 
 ## How it works (short version)
 
 DeepDream picks a layer inside a trained image classifier and asks: "what would
 make this layer fire more strongly?" By computing the gradient of that layer's
 activation with respect to the input pixels and stepping the image in that
-direction, it exaggerates whatever the layer already partially detects — edges,
-textures, eyes, fur — into vivid, repeating patterns. Doing this across multiple
+direction, it exaggerates whatever the layer already partially detects, edges,
+textures, eyes, fur, into vivid, repeating patterns. Doing this across multiple
 scales (octaves) and reinjecting fine detail between scales is what gives the
-output its fractal, all-over richness.
+output its fractal, all over richness.
